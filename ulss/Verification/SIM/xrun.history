@@ -1,0 +1,2 @@
+s1(05May2025:16:45:59):  xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=maximum_token_test 
+s2(05May2025:16:47:54):  xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=maximun_packet_count_test 

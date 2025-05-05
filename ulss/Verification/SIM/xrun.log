@@ -1,0 +1,114 @@
+xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s009: Started on May 05, 2025 at 16:47:54 IST
+xrun
+	-access +rwc
+	-f compile_list.f
+		./../../RTL/grant_arbiter.sv
+		./../../RTL/rate_limiter_16to8.sv
+		./../../RTL/sch_ctrl_fsm.sv
+		./../../RTL/scheduler_reg_config.sv
+		./../UVME/uvm_pkg/test_pkg.sv
+		./../UVME/top/ulss_top.sv
+		./../UVME/top/ulss_interface.sv
+	-uvmhome CDNS-1.1d
+	+UVM_TESTNAME=maximun_packet_count_test
+Recompiling... reason: file '../UVME/agent/ulss_driver.sv' is newer than expected.
+	expected: Mon May  5 16:45:43 2025
+	actual:   Mon May  5 16:47:42 2025
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
+file: ./../UVME/uvm_pkg/test_pkg.sv
+package test_pkg;
+               |
+xmvlog: *W,TSNSPK (./../UVME/uvm_pkg/test_pkg.sv,1|15): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		test_pkg
+		ulss_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       8       5
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 16102   11463
+		Scalar wires:                472       -
+		Vectored wires:              298       -
+		Named events:                  4      12
+		Always blocks:               142      37
+		Initial blocks:              369     185
+		Parallel blocks:              28      29
+		Cont. assignments:           312     117
+		Pseudo assignments:          254     254
+		Assertions:                    2       2
+		SV Class declarations:       226     340
+		SV Class specializations:    436     436
+	Writing initial simulation snapshot: worklib.ulss_top:sv
+Loading snapshot worklib.ulss_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,RNDXCELON: A newer version of the SystemVerilog constraint solver is being used which has better support for array-solving, new solve-order mechanism, and seed stability enhancements..
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cadence_march2021/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (20.09-s009)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test maximun_packet_count_test...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------
+Name                       Type                       Size  Value
+-----------------------------------------------------------------
+uvm_test_top               maximun_packet_count_test  -     @2731
+  env                      ulss_env                   -     @2791
+    ulss_agent             ulss_agent                 -     @2837
+      drv                  ulss_driver                -     @2871
+        rsp_port           uvm_analysis_port          -     @2971
+        seq_item_port      uvm_seq_item_pull_port     -     @2920
+      mon                  ulss_monitor               -     @3002
+        analysis_port      uvm_analysis_port          -     @3709
+      sqr                  ulss_sequencer             -     @3033
+        rsp_export         uvm_analysis_export        -     @3091
+        seq_item_export    uvm_seq_item_pull_imp      -     @3639
+        arbitration_queue  array                      0     -    
+        lock_queue         array                      0     -    
+        num_last_reqs      integral                   32    'd1  
+        num_last_rsps      integral                   32    'd1  
+-----------------------------------------------------------------
+
+UVM_INFO ./../UVME/tests/maximun_packet_count_test.sv(19) @ 0: uvm_test_top [uvm_test_top] it test first line
+UVM_INFO ./../UVME/tests/maximun_packet_count_test.sv(21) @ 0: uvm_test_top [maximun_packet_count_test] inside the packet_count_limit_maximun_packet_count_sequence_instuence_inst test
+UVM_INFO ./../UVME/sequence/maximun_packet_count_sequence.sv(33) @ 0: uvm_test_top.env.ulss_agent.sqr@@maximun_packet_count_sequence_inst [maximun_packet_count_sequence] maximun_packet_count_sequence: Starting test with a single stream mapping
+UVM_INFO ./../UVME/agent/ulss_driver.sv(135) @ 128: uvm_test_top.env.ulss_agent.drv [ulss_driver] [DRV] WRITE ADDR=0 DATA=0x1
+UVM_WARNING ./../UVME/agent/ulss_driver.sv(80) @ 144078: uvm_test_top.env.ulss_agent.drv [ulss_driver] Global simulation timeout reached, ending simulation
+UVM_WARNING ./../UVME/agent/ulss_driver.sv(292) @ 144158: uvm_test_top.env.ulss_agent.drv [ulss_driver] Timeout waiting for pck_rd_en_grnt_2 - attempting recovery
+UVM_ERROR ./../UVME/agent/ulss_driver.sv(342) @ 144278: uvm_test_top.env.ulss_agent.drv [ulss_driver] Recovery failed for pck_rd_en_grnt_2 - skipping packet
+UVM_WARNING ./../UVME/agent/ulss_driver.sv(292) @ 288278: uvm_test_top.env.ulss_agent.drv [ulss_driver] Timeout waiting for pck_rd_en_grnt_4 - attempting recovery
+UVM_ERROR ./../UVME/agent/ulss_driver.sv(342) @ 288398: uvm_test_top.env.ulss_agent.drv [ulss_driver] Recovery failed for pck_rd_en_grnt_4 - skipping packet
+UVM_WARNING ./../UVME/agent/ulss_driver.sv(292) @ 432398: uvm_test_top.env.ulss_agent.drv [ulss_driver] Timeout waiting for pck_rd_en_grnt_6 - attempting recovery
+UVM_ERROR ./../UVME/agent/ulss_driver.sv(342) @ 432518: uvm_test_top.env.ulss_agent.drv [ulss_driver] Recovery failed for pck_rd_en_grnt_6 - skipping packet
+UVM_WARNING ./../UVME/agent/ulss_driver.sv(292) @ 576518: uvm_test_top.env.ulss_agent.drv [ulss_driver] Timeout waiting for pck_rd_en_grn
