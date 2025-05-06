@@ -62,8 +62,8 @@ class in_stream_four_to_seven_map_sequence extends uvm_sequence#(ulss_tx);
         tx.rate_limiter_16to4_rstn == 1;
         tx.sch_reg_wr_en   == 1'b1;
         tx.sch_reg_wr_addr == 5'd8; // IN_STREAM_4_REG 
-        tx.sch_reg_wr_data[14:0]  == 15'd3;  // 3 tokens wait
-        tx.sch_reg_wr_data[63:15] == 49'd1;  // 1 packet
+        tx.sch_reg_wr_data[15:0]  == 16'd3;  // 3 tokens wait
+        tx.sch_reg_wr_data[63:16] == 48'd1;  // 1 packet
         
         // Keep all streams inactive during configuration
         tx.pck_str_empty_0 == 1'b1;
@@ -94,8 +94,8 @@ class in_stream_four_to_seven_map_sequence extends uvm_sequence#(ulss_tx);
         tx.rate_limiter_16to4_rstn == 1;
         tx.sch_reg_wr_en   == 1'b1;
         tx.sch_reg_wr_addr == 5'd9; // IN_STREAM_5_REG
-        tx.sch_reg_wr_data[14:0]  == 15'd2;  // 2 tokens wait
-        tx.sch_reg_wr_data[63:15] == 49'd1;  // 1 packet
+        tx.sch_reg_wr_data[15:0]  == 16'd2;  // 2 tokens wait
+        tx.sch_reg_wr_data[63:16] == 48'd1;  // 1 packet
         
         // Keep all streams inactive during configuration
         tx.pck_str_empty_0 == 1'b1;
@@ -126,8 +126,8 @@ class in_stream_four_to_seven_map_sequence extends uvm_sequence#(ulss_tx);
         tx.rate_limiter_16to4_rstn == 1;
         tx.sch_reg_wr_en   == 1'b1;
         tx.sch_reg_wr_addr == 5'd10; // IN_STREAM_6_REG
-        tx.sch_reg_wr_data[14:0]  == 15'd3;  // 3 tokens wait
-        tx.sch_reg_wr_data[63:15] == 49'd1;  // 1 packet
+        tx.sch_reg_wr_data[15:0]  == 16'd3;  // 3 tokens wait
+        tx.sch_reg_wr_data[63:16] == 48'd1;  // 1 packet
         
         // Keep all streams inactive during configuration
         tx.pck_str_empty_0 == 1'b1;
@@ -158,8 +158,8 @@ class in_stream_four_to_seven_map_sequence extends uvm_sequence#(ulss_tx);
         tx.rate_limiter_16to4_rstn == 1;
         tx.sch_reg_wr_en   == 1'b1;
         tx.sch_reg_wr_addr == 5'd11; // IN_STREAM_7_REG
-        tx.sch_reg_wr_data[14:0]  == 15'd3;  // 3 tokens wait
-        tx.sch_reg_wr_data[63:15] == 49'd1;  // 1 packet
+        tx.sch_reg_wr_data[15:0]  == 16'd3;  // 3 tokens wait
+        tx.sch_reg_wr_data[63:16] == 48'd1;  // 1 packet
         
         // Keep all streams inactive during configuration
         tx.pck_str_empty_0 == 1'b1;
