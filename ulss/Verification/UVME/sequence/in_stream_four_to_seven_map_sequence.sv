@@ -21,6 +21,17 @@ class in_stream_four_to_seven_map_sequence extends uvm_sequence#(ulss_tx);
       //------------------------------------------------------------------
       // Phase 1: Configure scheduler registers - OUTPUT STREAM MAPPING
       //------------------------------------------------------------------
+
+
+          // Assert reset (active low)
+    `uvm_do_with(tx, {
+        tx.rate_limiter_16to4_rstn == 1'b0;
+        tx.sch_reg_wr_en == 1'b0;
+    });
+
+    // Allow some cycles for reset
+    repeat(5) #50;
+
       
       // Configure output stream 1 mapping
       `uvm_do_with(tx, { 
